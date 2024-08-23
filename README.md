@@ -1,2 +1,2 @@
-# Temporario (Nome precisa ser decidido)
-# Loja (Ideia de projeto precisa ser decidida)
+# CV (Caua e Victor)
+# Site biblioteca (Idea temporaria)

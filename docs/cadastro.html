@@ -6,6 +6,40 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Faça seu Cadastro</h1>
+    <form action="login.html" method="GET">
+        <fieldset>
+        <div>
+            <label for="username">Username:*</label>
+            <input type="text" id="username" placeholder="Seu nome" minlength="2" maxlength="12" required>
+        </div>
+        <div>
+            <label for="email">E-mail:*</label>
+            <input type="email" id="email" placeholder="exemplo@gmail.com" required>
+        </div>
+        <div>
+            <label for="password">Senha:*</label>
+            <input type="password" id="password" minlength="8" required>
+        </div>
+        <div>
+            <label for="date">Data de nacimento:*</label>
+            <input type="date" id="date" required>
+        </div>
+        <div>
+            <legend>sexo</legend>
+            <label for="size_1">feminino</label>
+            <input type="radio" name="size" id="size_1" value="feminino" />
+
+            <label for="size_2">masculino</label>
+            <input type="radio" name="size" id="size_2" value="masculino" />
+        </div>
+        <div>
+            <input type="reset">
+        </div>
+        <div>
+            <input type="submit" value="Cadastro">
+        </div>
+        </fieldset>
+    </form>
 </body>
 </html>

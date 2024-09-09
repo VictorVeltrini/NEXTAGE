@@ -6,16 +6,24 @@
     <title>Login</title>
 </head>
 <body>
-    <form>
-
-        <label for="username">Username:</label>
-        <input type="text" id="username" placeholder="Seu nome" minlength="2" maxlength="12" required><br>
-
-        <label for="password">Senha:</label>
-        <input type="password" id="password" minlength="8" required><br>
-
-        <input type="reset"><br>
-        <input type="button" value="Login" onclick="window.location.href='index.html'">
+    <h1>Faça seu Login</h1>
+    <form action="index.html" method="GET">
+        <div>
+            <label for="username">Username:*</label>
+            <input type="text" id="username" placeholder="Seu nome" minlength="2" maxlength="12" required>
+        </div>
+        <div>
+            <label for="email">E-mail:*</label>
+            <input type="email" id="email" placeholder="exemplo@gmail.com" required>
+        </div>
+        <div>
+            <label for="password">Senha:*</label>
+            <input type="password" id="password" minlength="8" required><br>
+        </div>
+        <div>
+            <input type="reset"><br>
+            <input type="submit" value="Login">
+        </div>
     </form>
 </body>
 </html>

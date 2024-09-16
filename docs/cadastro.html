@@ -1,45 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro e Login</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .outer-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #e0e0e0;
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+        }
+        fieldset {
+            border: none;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        legend {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-container input {
+            padding: 6px;
+            font-size: 14px;
+            margin: 5px 0;
+            height: 15px;
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .form-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            height: 30px;
+            padding: 6px;
+            font-size: 12px;
+            width: 100%;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .btn-login {
+            color: #FF5733;
+            text-decoration: none;
+            font-size: 12px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .btn-login:hover {
+            text-decoration: underline;
+        }
+        .form-container label {
+            margin: 8px 0;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: left;
+            width: 100%;
+        }
+        .form-container .radio-group {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: 10px 0;
+        }
+        .form-container .radio-group label {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            margin: 0;
+            cursor: pointer;
+        }
+        .form-container .radio-group input[type="radio"] {
+            appearance: none;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 2px solid #007BFF;
+            outline: none;
+            margin-right: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .form-container .radio-group input[type="radio"]:checked {
+            background-color: #007BFF;
+            border-color: #007BFF;
+        }
+        .form-container .radio-group input[type="radio"]:focus {
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+        }
+    </style>
 </head>
 <body>
-    <h1>Faça seu Cadastro</h1>
-    <form action="login.html" method="GET">
-        <fieldset>
-        <div>
-            <label for="username">Username:*</label>
-            <input type="text" id="username" placeholder="Seu nome" minlength="2" maxlength="12" required>
-        </div>
-        <div>
-            <label for="email">E-mail:*</label>
-            <input type="email" id="email" placeholder="exemplo@gmail.com" required>
-        </div>
-        <div>
-            <label for="password">Senha:*</label>
-            <input type="password" id="password" minlength="8" required>
-        </div>
-        <div>
-            <label for="date">Data de nacimento:*</label>
-            <input type="date" id="date" required>
-        </div>
-        <div>
-            <legend>sexo</legend>
-            <label for="size_1">feminino</label>
-            <input type="radio" name="size" id="size_1" value="feminino" />
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+    </nav>
+    <div class="outer-box">
+        <div class="form-container">
+            <fieldset>
+                <legend>Cadastro</legend>
+                <form action="cadastro.html" method="post">
+                    <label for="nome">Digite seu nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Marcos" required>
 
-            <label for="size_2">masculino</label>
-            <input type="radio" name="size" id="size_2" value="masculino" />
+                    <label for="senha">Digite sua senha:</label>
+                    <input type="password" id="senha" name="senha" placeholder="12345" required>
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" required>
+
+                    <label for="date">Data de nascimento:</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <div class="radio-group">
+                        <label for="size_1">Feminino
+                            <input type="radio" name="size" id="size_1" value="feminino">
+                        </label>
+                        <label for="size_2">Masculino
+                            <input type="radio" name="size" id="size_2" value="masculino">
+                        </label>
+                    </div>
+
+                    <input type="submit" value="Cadastrar">
+                    <a href="login.html" class="btn-login">Já tenho conta</a>
+                </form>
+            </fieldset>
         </div>
-        <div>
-            <input type="reset">
-        </div>
-        <div>
-            <input type="submit" value="Cadastro">
-        </div>
-        </fieldset>
-    </form>
+    </div>
 </body>
 </html>

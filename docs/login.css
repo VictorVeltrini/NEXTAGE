@@ -29,17 +29,15 @@ body, html {
     width: 250px;
 }
 
+h1.login-title {
+    text-align: center;
+    margin: 20px 0;
+}
+
 fieldset {
     border: none;
     margin-bottom: 20px;
     width: 100%;
-}
-
-legend {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    text-align: center;
 }
 
 .form-container form {
@@ -74,11 +72,15 @@ legend {
 }
 
 .btn-login {
-    color: #FF5733;
+    color: #3633ff;
     text-decoration: none;
     font-size: 12px;
     margin-top: 10px;
     cursor: pointer;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .btn-login:hover {
@@ -91,40 +93,4 @@ legend {
     font-weight: bold;
     text-align: left;
     width: 100%;
-}
-
-.form-container .radio-group {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin: 10px 0;
-}
-
-.form-container .radio-group label {
-    display: flex;
-    align-items: center;
-    font-size: 12px;
-    margin: 0;
-    cursor: pointer;
-}
-
-.form-container .radio-group input[type="radio"] {
-    appearance: none;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    border: 2px solid #007BFF;
-    outline: none;
-    margin-right: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-
-.form-container .radio-group input[type="radio"]:checked {
-    background-color: #007BFF;
-    border-color: #007BFF;
-}
-
-.form-container .radio-group input[type="radio"]:focus {
-    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
 }

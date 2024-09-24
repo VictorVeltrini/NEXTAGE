@@ -1,6 +1,6 @@
 # 📚 Projeto Biblioteca Digital
 
-## Equipe
+## (?) Equipe
 **NEXTAGE**  
 Integrantes:  
 - Caua Horonato - 202402938223  
@@ -21,3 +21,6 @@ Este projeto é um site simples de uma biblioteca digital. A ideia é que os usu
 
 ## 📧 Contato
 Para mais informações, entre em contato com os integrantes da equipe.
+
+## (?) Desing
+https://www.figma.com/design/4GQHhUgWbTLJQyImg2iWcZ/Untitled?node-id=1-2151&t=KG8YgOElQyMI0tlr-1

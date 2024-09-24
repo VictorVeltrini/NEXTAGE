@@ -20,8 +20,53 @@ a:hover {
 }
 
 .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background-color: #007bff; /* Cor de fundo da navbar */
 }
+
+.navbar-center {
+    flex-grow: 1;
+    text-align: center; /* Centraliza a barra de pesquisa */
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right .nav-item {
+    margin-left: 15px; /* Espaçamento entre os links */
+}
+
+.navbar-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Centraliza os elementos dentro da navbar-center */
+}
+
+.form-control {
+    width: 450px; /* Ajuste a largura conforme necessário */
+    background-color: #fff; /* Cor de fundo da barra de pesquisa */
+    color: #000; /* Cor do texto */
+    border: 1px solid black; /* Borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    margin-right: 10px; /* Espaçamento à direita para o botão */
+}
+
+.btn-outline-light {
+    background-color: #fff; /* Cor de fundo do botão */
+    border: 1px solid black; /* Borda do botão */
+    color: black; /* Cor do texto do botão */
+}
+
+.btn-outline-light:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
 
 .container {
     background-color: #fff;
@@ -81,4 +126,22 @@ a:hover {
 .dark-theme {
     background-color: #333;
     color: #fff;
+}
+
+/* Estilo para a nova navbar */
+.navbar-dark {
+    background-color: #232f3e; /* Cor de fundo preta */
+}
+
+.navbar-dark .nav-link {
+    color: lightblue; /* Cor dos links */
+}
+
+.navbar-dark .nav-link:hover {
+    color: #ccc; /* Cor dos links ao passar o mouse */
+}
+
+/* Dimensões da nova navbar */
+.navbar {
+    padding: 1px 1px; /* Menos padding para a navbar menor */
 }

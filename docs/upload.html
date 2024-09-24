@@ -1,12 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Livro - Nextage</title>
     <link rel="stylesheet" href="upload.css">
-    <title>Document</title>
+    <script src="upload.js" defer></script>
 </head>
 <body>
-    <h1 class="title">Publique seus livros aqui!!</h1>
+    <header>
+        <nav>
+            <a class="logo" href="index.html">Nextage</a>
+            <div class="theme-toggle">
+                <button id="theme-button" class="theme-btn">Modo Escuro</button>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <h1>Adicionar Novo Livro</h1>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <div class="fieldset-container">
+                <label for="book-title">Título do Livro:</label>
+                <input type="text" id="book-title" name="book-title" required>
+
+                <label for="book-author">Autor:</label>
+                <input type="text" id="book-author" name="book-author" required>
+
+                <label for="release-date">Data de Lançamento:</label>
+                <input type="date" id="release-date" name="release-date" required>
+
+                <label for="price">Preço:</label>
+                <input type="number" id="price" name="price" step="0.01" required>
+
+                <label for="book-description">Descrição:</label>
+                <textarea id="book-description" name="book-description" required></textarea>
+
+                <label for="book-image">Imagem do Livro:</label>
+                <input type="file" id="book-image" name="book-image" accept="image/*" required>
+            </div>
+            <button type="submit">Adicionar Livro</button>
+        </form>
+    </div>
 </body>
 </html>

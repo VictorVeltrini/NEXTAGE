@@ -145,3 +145,27 @@ a:hover {
 .navbar {
     padding: 1px 1px; /* Menos padding para a navbar menor */
 }
+
+/* Estilo para o container dos livros no tema escuro */
+.dark-theme .container {
+    background-color: #444; /* Cor de fundo escura */
+    color: #fff; /* Cor do texto */
+}
+
+.dark-theme .fieldset-container {
+    border: 2px solid #666; /* Borda um pouco mais clara */
+    background-color: #555; /* Fundo da caixa dos livros */
+}
+
+.dark-theme .price {
+    color: #ddd; /* Cor do preço no tema escuro */
+}
+
+.dark-theme .btn-comprar {
+    background-color: #4CAF50; /* Cor do botão no tema escuro */
+    color: white; /* Cor do texto do botão */
+}
+
+.dark-theme .btn-comprar:hover {
+    background-color: #45a049; /* Cor do botão ao passar o mouse */
+}

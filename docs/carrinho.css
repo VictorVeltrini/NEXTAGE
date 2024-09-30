@@ -1,13 +1,170 @@
-.meu-botao {
-    background-color: green;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a { 
+    color: #fff;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background-color: #007bff; /* Cor de fundo da navbar */
+}
+
+.navbar-center {
+    flex-grow: 1;
+    text-align: center; /* Centraliza a barra de pesquisa */
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right .nav-item {
+    margin-left: 15px; /* Espaçamento entre os links */
+}
+
+.navbar-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /* Centraliza os elementos dentro da navbar-center */
+}
+
+.form-control {
+    width: 450px; /* Ajuste a largura conforme necessário */
+    background-color: #fff; /* Cor de fundo da barra de pesquisa */
+    color: #000; /* Cor do texto */
+    border: 1px solid black; /* Borda */
+    border-radius: 4px; /* Bordas arredondadas */
+    margin-right: 10px; /* Espaçamento à direita para o botão */
+}
+
+.btn-outline-light {
+    background-color: #fff; /* Cor de fundo do botão */
+    border: 1px solid black; /* Borda do botão */
+    color: black; /* Cor do texto do botão */
+}
+
+.btn-outline-light:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.fieldset-container {
+    border: 2px solid #ccc; 
+    border-radius: 8px; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    background-color: #f9f9f9; 
+}
+
+.item {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.btn-comprar {
+    background-color: #4CAF50;
+    color: white;
     border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
     border-radius: 4px;
+}
+
+.btn-comprar:hover {
+    background-color: #45a049;
+}
+
+.item img {
+    width: 100%;
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 8px; 
+}
+
+.light-theme {
+    background-color: #fff;
+    color: #000;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Estilo para a nova navbar */
+.navbar-dark {
+    background-color: #232f3e; /* Cor de fundo preta */
+}
+
+.navbar-dark .nav-link {
+    color: lightblue; /* Cor dos links */
+}
+
+.navbar-dark .nav-link:hover {
+    color: #ccc; /* Cor dos links ao passar o mouse */
+}
+
+/* Dimensões da nova navbar */
+.navbar {
+    padding: 1px 1px; /* Menos padding para a navbar menor */
+}
+
+/* Estilo para o container dos livros no tema escuro */
+.dark-theme .container {
+    background-color: #444; /* Cor de fundo escura */
+    color: #fff; /* Cor do texto */
+}
+
+.dark-theme .fieldset-container {
+    border: 2px solid #666; /* Borda um pouco mais clara */
+    background-color: #555; /* Fundo da caixa dos livros */
+}
+
+.dark-theme .price {
+    color: #ddd; /* Cor do preço no tema escuro */
+}
+
+.dark-theme .btn-comprar {
+    background-color: #4CAF50; /* Cor do botão no tema escuro */
+    color: white; /* Cor do texto do botão */
+}
+
+.dark-theme .btn-comprar:hover {
+    background-color: #45a049; /* Cor do botão ao passar o mouse */
 }

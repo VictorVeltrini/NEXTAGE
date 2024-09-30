@@ -7,7 +7,7 @@ Integrantes:
 - Victor Veltrini - 202402394291  
 
 ## 🚀 Idea do Projeto
-Este projeto é um site simples de uma biblioteca digital. A ideia é que os usuários possam explorar o acervo da biblioteca, colocara venda seus proprios livros, pesquisar por livros e acessar informações.
+A NEXTAGE nasceu com o objetivo de criar um espaço onde amantes de livros possam se conectar de maneira única. A ideia é oferecer não apenas uma plataforma de vendas, mas um lugar onde possam colocar seus proprios livros a venda.
 
 ## ⚙️ Funcionalidades
 - **Publicação de Livros**: Permite que os usuários publiquem seus propiros livros.

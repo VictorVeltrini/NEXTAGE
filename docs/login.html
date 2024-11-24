@@ -11,24 +11,23 @@
 <body>
     <header>
         <nav>
-            <a class="logo" href="index.html">Nextlevel Livros</a>
+            <a class="logo" href="index.php">Nextage Livros</a>
+        </nav>
     </header>
     
-    <form action="index.html" method="GET">
+    <form action="login.php" method="post"> <!-- Alterado para enviar para login.php -->
         <div class="outer-box">
             <div class="form-container">
                 <fieldset>
                     <legend>Login</legend>
-                    <form action="login.html" method="post">
-                        <label for="email">E-mail:</label>
-                        <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" required>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" required>
 
-                        <label for="senha">Digite sua senha:</label>
-                        <input type="password" id="senha" name="senha" placeholder="12345" required>
+                    <label for="senha">Digite sua senha:</label>
+                    <input type="password" id="senha" name="senha" placeholder="12345" required>
     
-                        <button type="submit">Entrar</button>
-                        <a href="cadastro.html" class="btn-login">Não tenho conta</a>
-                    </form>
+                    <button type="submit">Entrar</button>
+                    <a href="cadastro.html" class="btn-login">Não tenho conta</a>
                 </fieldset>
             </div>
         </div>

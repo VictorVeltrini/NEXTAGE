@@ -17,7 +17,7 @@ session_start();
  <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
         <a class="navbar-brand logo" href="index.php" id="brand-title">Nextage</a>
-        <a href="index.php">
+        <a href="index.html">
             <i class="fa-solid fa-book" id="brand-icon" style="display: inline;"></i>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,12 +37,18 @@ session_start();
                                     <i class="fa-solid fa-user" style="font-size: 20px;"></i> <!-- Ícone de usuário -->
                                     Olá, <?php echo htmlspecialchars($_SESSION['user_nome']); ?>
                                 </a>
+							<script>
+									document.getElementById('logoutButton').addEventListener('click', function() {
+										// Redirecionar para a página de logout
+										window.location.href = 'logout.php'; // ou a URL que você usa para logout
+									});
+							</script>
+                                        <button id="logoutButton">Sair</button>
+                                        <a href="mudarsenha.html" class="mudarsenha">Mudar senha</a>
+
                                 <ul class="dropdown-menu">
                                     <li class="dropdown-item">
                                         <strong>Email:</strong> <?php echo htmlspecialchars($_SESSION['user_email']); ?>
-											
-											<li><a class="dropdown-item" href="carrinho.php">Meu Perfil</a></li>
-											<li><a class="dropdown-item" href="logout.php">Sair</a></li>
                                     </li>
 
                                 </ul>
@@ -225,8 +231,7 @@ session_start();
 			echo "Erro: " . $e->getMessage();
 		}
 		?>
-		
-		
+	
         </div>
     </div>
 

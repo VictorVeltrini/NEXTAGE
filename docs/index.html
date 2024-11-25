@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,58 +10,38 @@ session_start();
     <link rel="stylesheet" href="index.css">
 </head>
 <body class="light-theme">
- <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-        <a class="navbar-brand logo" href="index.php" id="brand-title">Nextage</a>
-        <a href="index.php">
-            <i class="fa-solid fa-book" id="brand-icon" style="display: inline;"></i>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto"></ul>
-            <div class="navbar-right">
-                <a href="carrinho.php" class="me-3">
-                    <img src="img/navbar/caixa.png" alt="Carrinho de compras" style="width:25px;height:25px;">
-                </a>
-                <div class="collapse navbar-collapse" id="navbarNavi">
-                    <ul class="navbar-nav me-auto">
-                        <?php if (isset($_SESSION['user_id'])): ?>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">
-                                    <i class="fa-solid fa-user" style="font-size: 20px;"></i> <!-- Ícone de usuário -->
-                                    Olá, <?php echo htmlspecialchars($_SESSION['user_nome']); ?>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="dropdown-item">
-                                        <strong>Email:</strong> <?php echo htmlspecialchars($_SESSION['user_email']); ?>
-											
-											<li><a class="dropdown-item" href="carrinho.php">Meu Perfil</a></li>
-											<li><a class="dropdown-item" href="logout.php">Sair</a></li>
-                                    </li>
-
-                                </ul>
-                            </li>
-                        <?php else: ?>
-                            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                            <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li>
-                        <?php endif; ?>
-                        <li class="nav-item"><a class="nav-link" href="upload.html">Venda Conosco</a></li>
-                    </ul>
-                    <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">
-                            <i class="bi bi-brightness-high"></i> Claro
-                        </a>
-                        <ul class="dropdown-menu themes-list">
-                            <li><a class="dropdown-item" href="#" data-theme="light">Claro</a></li>
-                            <li><a class="dropdown-item" href="#" data-theme="dark">Escuro</a></li>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <a class="navbar-brand logo" href="index.php" id="brand-title">Nextage</a>
+            <a href="index.php">
+                <i class="fa-solid fa-book" id="brand-icon" style="display: inline;"></i>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto"></ul>
+                <div class="navbar-right">
+                    <a href="carrinho.php" class="me-3">
+                        <img src="img/navbar/caixa.png" alt="Carrinho de compras" style="width:25px;height:25px;">
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarNavi">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item"><a class="nav-link" href="upload.html">Venda Conosco</a></li>
                         </ul>
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">
+                                <i class="bi bi-brightness-high"></i> Claro
+                            </a>
+                            <ul class="dropdown-menu themes-list">
+                                <li><a class="dropdown-item" href="#" data-theme="light">Claro</a></li>
+                                <li><a class="dropdown-item" href="#" data-theme="dark">Escuro</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </nav>          
+        </nav>          
     </header>
 
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -191,42 +167,6 @@ session_start();
                     </form>
                 </fieldset>
             </div>
-			
-		<?php
-		$host = 'localhost';
-		$dbname = 'nextage';
-		$username = 'root';
-		$password = '';
-
-		try {
-			// Conexão com o banco de dados
-			$pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-			// Buscar livros no banco de dados
-			$query = "SELECT * FROM livros";
-			$stmt = $pdo->query($query);
-
-			while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-				echo '<div class="col">';
-				echo '<fieldset class="fieldset-container">';
-				echo '<img src="' . htmlspecialchars($row['imagem']) . '" alt="' . htmlspecialchars($row['titulo']) . '" class="img-fluid">'; // Adicionando img-fluid
-				echo '<div class="item">' . htmlspecialchars($row['titulo']) . '</div>';
-				echo '<div class="price">R$ ' . number_format($row['preco'], 2, ',', '.') . '</div>';
-				echo '<form action="comprar.php" method="post">';
-				echo '<input type="hidden" name="nome_item" value="' . htmlspecialchars($row['titulo']) . '">';
-				echo '<input type="hidden" name="preco_item" value="' . number_format($row['preco'], 2, ',', '.') . '">';
-				echo '<button type="submit" class="btn btn-comprar">Comprar</button>';
-				echo '</form>';
-				echo '</fieldset>';
-				echo '</div>';
-			}
-		} catch (PDOException $e) {
-			echo "Erro: " . $e->getMessage();
-		}
-		?>
-		
-		
         </div>
     </div>
 

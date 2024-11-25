@@ -12,11 +12,6 @@ body {
     transition: background-color 0.3s, color 0.3s; /* Transição suave para temas */
 }
 
-body.dark {
-    background-color: #1a1a1a; /* Cor de fundo escuro */
-    color: #fff; /* Cor do texto no modo escuro */
-}
-
 header {
     position: fixed; /* Fixa a navbar no topo */
     top: 0;
@@ -42,6 +37,16 @@ nav {
     text-decoration: none; /* Remove sublinhado */
 }
 
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
 .theme-toggle {
     position: relative;
 }
@@ -54,11 +59,6 @@ nav {
     padding: 8px 12px; /* Menor padding para o botão */
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-}
-
-body.dark .theme-btn {
-    background-color: #0056b3; /* Azul no modo escuro */
-    color: #fff; /* Texto branco no botão */
 }
 
 .theme-btn:hover {
@@ -75,17 +75,9 @@ body.dark .theme-btn {
     text-align: left;
 }
 
-body.dark .container {
-    background-color: #2c2c2c; /* Fundo escuro para o container */
-}
-
 h1 {
     color: #0056b3; /* Azul */
     margin-bottom: 20px;
-}
-
-body.dark h1 {
-    color: #fff; /* Título branco no modo escuro */
 }
 
 .fieldset-container {
@@ -94,10 +86,6 @@ body.dark h1 {
     padding: 20px;
     background-color: #f9f9f9;
     margin-bottom: 20px;
-}
-
-body.dark .fieldset-container {
-    background-color: #3c3c3c; /* Fundo escuro para o campo */
 }
 
 label {
@@ -116,16 +104,6 @@ input[type="file"] {
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
-}
-
-body.dark input[type="text"],
-body.dark input[type="date"],
-body.dark input[type="number"],
-body.dark textarea,
-body.dark input[type="file"] {
-    background-color: #555; /* Fundo escuro para inputs */
-    color: #fff; /* Texto branco em inputs */
-    border: 1px solid #777; /* Borda mais clara em inputs */
 }
 
 button {

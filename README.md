@@ -11,16 +11,15 @@ A NEXTAGE nasceu com o objetivo de criar um espaço onde amantes de livros possa
 
 ## ⚙️ Funcionalidades
 - **Publicação de Livros**: Permite que os usuários publiquem seus propiros livros.
-- **Pesquisa de Livros**: Permite que os usuários busquem por livros utilizando filtros como título, autor e gênero.
-- **Detalhes do Livro**: Exibe informações detalhadas sobre cada obra, incluindo sinopse, autor e ano de publicação.
 - **Navegação Intuitiva**: Interface simples e fácil de usar, projetada para proporcionar uma experiência agradável ao usuário.
 
 ## 🛠️ Tecnologias Utilizadas
 - **HTML/CSS**: Para a estrutura e o estilo das páginas.
 - **JavaScript**: Para a interatividade do site.
+- **PHP/Xampp**: Para comunicação com o banco de dados
 
 ## 📧 Contato
 Para mais informações, entre em contato com os integrantes da equipe.
 
-## (?) Desing
+## (?) Design
 https://www.figma.com/design/4GQHhUgWbTLJQyImg2iWcZ/Untitled?node-id=1-2151&t=KG8YgOElQyMI0tlr-1
